@@ -1,0 +1,14 @@
+.category-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .category-menu li {
+    padding: 8px;
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  }
+  
+  .category-menu li:hover {
+    background-color: #f0f0f0; /* Resaltar la opción al pasar el mouse */
+  }
+  

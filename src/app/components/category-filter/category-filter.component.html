@@ -1,0 +1,11 @@
+<button (click)="toggleCategoryMenu()" class="btn btn-secondary float-right">
+  Categorías
+</button>
+
+<div *ngIf="showCategories" class="category-menu">
+  <ul>
+    <li *ngFor="let category of categories" (click)="selectCategory(category)" style="cursor: pointer;">
+      {{ category }}
+    </li>
+  </ul>
+</div>
