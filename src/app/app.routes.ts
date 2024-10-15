@@ -4,6 +4,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 export const routes: Routes = [
+  
   { path: '', component: ProductListComponent },
   { path: 'product/:id', component: ProductDetailComponent }, 
   { path: 'not-found', component: NotFoundComponent },
