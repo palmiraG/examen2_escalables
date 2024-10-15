@@ -5,10 +5,10 @@
   
   .category-menu li {
     padding: 8px;
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    cursor: pointer; 
   }
   
   .category-menu li:hover {
-    background-color: #f0f0f0; /* Resaltar la opción al pasar el mouse */
+    background-color: #f0f0f0; 
   }
   

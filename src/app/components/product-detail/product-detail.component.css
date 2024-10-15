@@ -1,0 +1,20 @@
+.custom-img-size {
+    max-width: 100%;   
+    height: auto;      
+    max-height: 600px; 
+    object-fit: contain; 
+  }
+
+.title-details{
+  color: #3AAFB9;
+}
+
+.btn-details{
+  background-color: #8EA8C3;
+  border-color:#8EA8C3;
+}
+
+.btn-details:hover{
+  background-color: #4C6085;
+  border-color: #4C6085; 
+}

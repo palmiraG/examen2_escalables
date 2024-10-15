@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit,  } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../interface/product';
 import { CurrencyPipe, NgIf } from '@angular/common';
@@ -16,7 +16,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -24,5 +25,9 @@ export class ProductDetailComponent implements OnInit {
     this.productService.getProductById(productId).subscribe((data: Product) => {
       this.product = data;
     });
+  }
+  
+  goToList(): void {
+    this.router.navigate(['/']); 
   }
 }

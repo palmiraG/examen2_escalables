@@ -1,8 +1,10 @@
 <div class="store-header">
   <h1>Awesome Store</h1>
   <p>Your one-stop shop for quality products</p>
-  <app-category-filter (categorySelected)="onCategorySelected($event)"></app-category-filter>
 </div>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<div><router-outlet></router-outlet> </div>
+<!--<div class="container">
+  <app-category-filter (categorySelected)="productList.filterProductsByCategory($event)"></app-category-filter>
+  <app-product-list #productList></app-product-list>
+</div>-->
+

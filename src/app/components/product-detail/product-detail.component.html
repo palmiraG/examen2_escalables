@@ -1,15 +1,14 @@
 <div class="container mt-4" *ngIf="product">
-    <div class="row">
-      <div class="col-md-6">
-        <img [src]="product?.image" class="img-fluid" alt="{{ product?.title }}">
-      </div>
-      <div class="col-md-6">
-        <h1>{{ product?.title }}</h1>
-        <p>{{ product?.description }}</p>
-        <p><strong>Precio:</strong> {{ product?.price | currency }}</p>
-        <p><strong>Categoría:</strong> {{ product?.category }}</p>
-        <a routerLink="/" class="btn btn-secondary">Volver a la lista</a>
-      </div>
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="product?.image" class="img-fluid custom-img-size" alt="{{ product?.title }}">
+    </div>
+    <div class="col-md-6">
+      <h1 class = "title-details">{{ product?.title }}</h1>
+      <p>{{ product?.description }}</p>
+      <p><strong>Price:</strong> {{ product?.price | currency }}</p>
+      <p><strong>Category:</strong> {{ product?.category }}</p>
+      <button (click)="goToList()" class="btn btn-secondary btn-details">Back to</button>
     </div>
   </div>
-  
+</div>

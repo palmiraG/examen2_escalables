@@ -15,23 +15,22 @@ export class CategoryFilterComponent implements OnInit {
   categories: string[] = [];
   showCategories = false;
 
-  @Output() categorySelected = new EventEmitter<string>(); // Usamos Output para emitir el evento de selección
+  @Output() categorySelected = new EventEmitter<string>(); 
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    // Obtener todos los productos para extraer las categorías
     this.productService.getProducts().subscribe((products: Product[]) => {
-      this.categories = [...new Set(products.map(product => product.category))]; // Extraer categorías únicas
+      this.categories = [...new Set(products.map(product => product.category))]; 
     });
   }
 
   toggleCategoryMenu(): void {
-    this.showCategories = !this.showCategories; // Mostrar u ocultar el menú de categorías
+    this.showCategories = !this.showCategories; 
   }
 
   selectCategory(category: string): void {
-    this.categorySelected.emit(category); // Emitir la categoría seleccionada
-    this.showCategories = false; // Ocultar el menú de categorías
+    this.categorySelected.emit(category); 
+    this.showCategories = false; 
   }  
 }
