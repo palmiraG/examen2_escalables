@@ -3,11 +3,12 @@ import { ProductService } from '../../services/product.service';
 import { Product } from '../../interface/product';
 import { CurrencyPipe, NgFor } from '@angular/common';
 import { RouterModule } from '@angular/router'; 
+import { CategoryFilterComponent } from '../category-filter/category-filter.component';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CurrencyPipe, RouterModule, NgFor],
+  imports: [CurrencyPipe, RouterModule, NgFor, CategoryFilterComponent],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -27,5 +28,9 @@ export class ProductListComponent implements OnInit {
 
   filterProductsByCategory(category: string): void {
     this.filteredProducts = this.products.filter(product => product.category === category);
+  }
+  onCategorySelected(category: string): void {
+
+    localStorage.setItem('selectedCategory', category);
   }
 }
